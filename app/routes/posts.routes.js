@@ -2,6 +2,7 @@ const { Router } = require("express");
 module.exports = (app) => {
     const post = require("../controllers/post.comtroller");
     const router = Router();
+
     router.get('/', post.findAll);
     router.post('/', post.create);
     router.get('/:id', post.findOne);

@@ -5,7 +5,7 @@ module.exports = (mongoose) => {
             body      : String, 
             publish   : Boolean
         },{
-            timestamp : true
+            timestamps : true
         }
     )
 
