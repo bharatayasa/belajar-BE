@@ -20,8 +20,8 @@ const { url } = require('./config/db.config');
 
 db.mongoose
     .connect(url, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
+        // useNewUrlParser: true,
+        // useUnifiedTopology: true,
     })
     .then(() => {
         console.log("database connected successfully");

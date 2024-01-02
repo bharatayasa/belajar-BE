@@ -13,7 +13,7 @@ exports.findAll = (req, res) => {
     });
 }
 
-exports.create = (req, res) => {
+exports.insertOne = (req, res) => {
     const post = new Post({
         tittle      : req.body.tittle,
         body        : req.body.body,
@@ -43,7 +43,7 @@ exports.findOne = (req, res) => {
     });
 }
 
-exports.update = (req, res) => {
+exports.updateOne = (req, res) => {
     const id = req.params.id
 
     Post.findByIdAndUpdate(id, req.body)
@@ -65,7 +65,7 @@ exports.update = (req, res) => {
     });
 }
 
-exports.delete = (req, res) => {
+exports.deleteOne = (req, res) => {
     const id = req.params.id
 
     Post.findOneAndDelete(id)

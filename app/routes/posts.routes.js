@@ -4,10 +4,10 @@ module.exports = (app) => {
     const router = Router();
 
     router.get('/', post.findAll);
-    router.post('/', post.create);
+    router.post('/', post.insertOne);
     router.get('/:id', post.findOne);
-    router.put('/:id', post.update);
-    router.delete('/:id', post.delete);
+    router.put('/:id', post.updateOne);
+    router.delete('/:id', post.deleteOne);
     
     app.use('/api/post', router);
 };
